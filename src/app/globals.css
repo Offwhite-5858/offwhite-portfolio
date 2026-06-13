@@ -85,3 +85,16 @@ body {
   border-radius: 50%;
   animation: particle 4s ease-in infinite;
 }
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .dark body {
+    background: white !important;
+    color: black !important;
+  }
+}
