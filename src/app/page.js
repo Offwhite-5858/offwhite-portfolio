@@ -10,6 +10,7 @@ import ContactSection from "@/components/home/ContactSection";
 import ParticleBackground from "@/components/home/ParticleBackground";
 import LoadingScreen from "@/components/ui/LoadingScreen";
 import BackToTop from "@/components/ui/BackToTop";
+import siteConfig from "@/data/siteConfig";
 
 function GithubIcon({ size = 18 }) {
   return (
@@ -45,7 +46,6 @@ function InstagramIcon({ size = 18 }) {
 
 export default function Home() {
   const [typingDone, setTypingDone] = useState(false);
-  const whatsappNumber = "+2348119655967";
 
   useEffect(() => {
     const timer = setTimeout(() => setTypingDone(true), 3700);
@@ -53,7 +53,7 @@ export default function Home() {
   }, []);
 
   const openWhatsApp = () => {
-    window.open(`https://wa.me/${whatsappNumber}?text=Hi%20Offwhite!%20I'm%20interested%20in%20your%20work.`, "_blank");
+    window.open(`https://wa.me/${siteConfig.whatsapp}?text=Hi%20Offwhite!%20I'm%20interested%20in%20your%20work.`, "_blank");
   };
 
   return (
@@ -67,7 +67,6 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-12">
-            {/* Profile Photo - Shows first on mobile, second on desktop */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -87,7 +86,6 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Text - Shows second on mobile, first on desktop */}
             <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
@@ -143,11 +141,18 @@ export default function Home() {
                 transition={{ delay: 0.8, duration: 0.6 }}
                 className="flex gap-4 mt-8 justify-center lg:justify-start"
               >
-                {[GithubIcon, LinkedinIcon, TwitterIcon, InstagramIcon].map((Icon, i) => (
-                  <a key={i} href="#" className="w-10 h-10 rounded-full border border-gold-500 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-900 transition-all transform hover:-translate-y-1">
-                    <Icon size={18} />
-                  </a>
-                ))}
+                <a href={siteConfig.social.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gold-500 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-900 transition-all transform hover:-translate-y-1">
+                  <GithubIcon size={18} />
+                </a>
+                <a href={siteConfig.social.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gold-500 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-900 transition-all transform hover:-translate-y-1">
+                  <LinkedinIcon size={18} />
+                </a>
+                <a href={siteConfig.social.twitter} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gold-500 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-900 transition-all transform hover:-translate-y-1">
+                  <TwitterIcon size={18} />
+                </a>
+                <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gold-500 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-900 transition-all transform hover:-translate-y-1">
+                  <InstagramIcon size={18} />
+                </a>
               </motion.div>
             </div>
           </div>
@@ -159,7 +164,6 @@ export default function Home() {
       <ProjectsSection />
       <ContactSection />
 
-      {/* WhatsApp Floating Button */}
       <button
         onClick={openWhatsApp}
         className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all hover:scale-110 active:scale-95 animate-bounce"
