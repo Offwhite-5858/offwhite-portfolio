@@ -45,7 +45,7 @@ function InstagramIcon({ size = 18 }) {
 
 export default function Home() {
   const [typingDone, setTypingDone] = useState(false);
-  const whatsappNumber = "+1238119655967";
+  const whatsappNumber = "+2348119655967";
 
   useEffect(() => {
     const timer = setTimeout(() => setTypingDone(true), 3700);
