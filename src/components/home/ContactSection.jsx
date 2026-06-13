@@ -7,7 +7,7 @@ import FadeIn from "@/components/ui/FadeIn";
 
 export default function ContactSection() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
-  const whatsappNumber = "+1234567890"; // Replace with your number
+  const whatsappNumber = "+2348119655967"; // Replace with your number
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
