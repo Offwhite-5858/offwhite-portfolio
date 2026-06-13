@@ -45,7 +45,7 @@ export default function CVPage() {
               <Briefcase size={20} className="text-gold-500" /> Professional Summary
             </h2>
             <p className="text-dark-500 dark:text-dark-200 leading-relaxed">
-              Dedicated Full Stack Developer with 3+ years of experience building modern, responsive web applications. 
+              Dedicated Full Stack Developer with 5+ years of experience building modern, responsive web applications. 
               Proficient in front-end and back-end technologies including React, Next.js, PHP, Node.js, and various database systems. 
               Passionate about creating clean, efficient code and delivering exceptional user experiences. 
               Proven track record of developing complete web solutions for businesses, from eCommerce platforms to content management systems.
