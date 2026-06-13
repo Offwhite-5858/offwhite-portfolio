@@ -29,8 +29,7 @@ export default function AboutSection() {
                   projects, or sharing knowledge with the developer community.
                 </p>
               </div>
-              <a
-                href="#"
+              <a href="/cv"
                 className="inline-block mt-6 px-8 py-3 bg-gold-500 text-dark-900 font-semibold rounded-full hover:bg-gold-400 transition-all"
               >
                 Download CV
